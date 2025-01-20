@@ -78,7 +78,7 @@ const SyledCard = styled(Card)(({ theme }) => ({
   flexDirection: 'column',
   padding: 0,
   height: '100%',
-  backgroundColor: (theme.vars || theme).palette.background.paper,
+  backgroundColor: theme.palette.background.paper,
   '&:hover': {
     backgroundColor: 'transparent',
     cursor: 'pointer',
@@ -185,9 +185,9 @@ export default function MainContent() {
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
       <div>
         <Typography variant="h1" gutterBottom>
-          Blog
+            Unidad Educativa Bilingüe
         </Typography>
-        <Typography>Stay in the loop with the latest about our products</Typography>
+        <Typography>Estudio, Trabajo, Disciplina</Typography>
       </div>
       <Box
         sx={{
