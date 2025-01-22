@@ -42,7 +42,9 @@ const DragAndDropUploader = () => {
       gap={2}
       padding={2}
     >
-      <Typography variant="h6">Upload and Preview Image</Typography>
+      <Typography variant="h1">Unidad Educativa Bilingüe</Typography>
+      <Typography variant="h3">Cartelera Digital</Typography>
+      <Typography variant="h6">Subir la imagen</Typography>
       <Box
         {...getRootProps()}
         border="2px dashed #ccc"
@@ -60,7 +62,7 @@ const DragAndDropUploader = () => {
         ) : (
           <Box display="flex" flexDirection="column" alignItems="center">
             <CloudUploadIcon fontSize="large" />
-            <Typography>Drag & Drop your image here, or click to upload</Typography>
+            <Typography>Arrastre y coloque su image aqui o hacer click en el boton subir imagen</Typography>
           </Box>
         )}
       </Box>
@@ -70,7 +72,7 @@ const DragAndDropUploader = () => {
         sx={{ marginTop: 2 }}
         startIcon={<CloudUploadIcon />}
       >
-        Choose File
+        Subir Imagen
         <input
           hidden
           accept="image/*"
@@ -90,7 +92,7 @@ const DragAndDropUploader = () => {
           flexDirection="column"
           alignItems="center"
         >
-          <Typography variant="subtitle1">Preview:</Typography>
+          <Typography variant="subtitle1">Imagen Cargada</Typography>
           <img
             src={image}
             alt="Uploaded Preview"
@@ -103,7 +105,7 @@ const DragAndDropUploader = () => {
           />
           <TextField
             variant="outlined"
-            label="Editable Text"
+            label="Texto Editable"
             value={text}
             onChange={(e) => setText(e.target.value)}
             fullWidth
