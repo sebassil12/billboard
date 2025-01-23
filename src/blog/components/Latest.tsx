@@ -3,90 +3,91 @@ import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid2';
-import Pagination from '@mui/material/Pagination';
+// import Pagination from '@mui/material/Pagination';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import NavigateNextRoundedIcon from '@mui/icons-material/NavigateNextRounded';
 
 const articleInfo = [
   {
-    tag: 'Engineering',
-    title: 'The future of AI in software engineering',
-    description:
-      'Artificial intelligence is revolutionizing software engineering. Explore how AI-driven tools are enhancing development processes and improving software quality.',
+    tag: 'Philosophy',
+    title: 'La educación como motor del cambio',
+    description: 'La educación es el arma más poderosa para transformar el mundo.',
     authors: [
-      { name: 'Remy Sharp', avatar: '/static/images/avatar/1.jpg' },
-      { name: 'Travis Howard', avatar: '/static/images/avatar/2.jpg' },
+      { name: 'Nelson Mandela', avatar: '/static/images/avatar/1.jpg' },
     ],
   },
   {
-    tag: 'Product',
-    title: 'Driving growth with user-centric product design',
-    description:
-      'Our user-centric product design approach is driving significant growth. Learn about the strategies we employ to create products that resonate with users.',
-    authors: [{ name: 'Erica Johns', avatar: '/static/images/avatar/6.jpg' }],
-  },
-  {
-    tag: 'Design',
-    title: 'Embracing minimalism in modern design',
-    description:
-      'Minimalism is a key trend in modern design. Discover how our design team incorporates minimalist principles to create clean and impactful user experiences.',
-    authors: [{ name: 'Kate Morrison', avatar: '/static/images/avatar/7.jpg' }],
-  },
-  {
-    tag: 'Company',
-    title: 'Cultivating a culture of innovation',
-    description:
-      'Innovation is at the heart of our company culture. Learn about the initiatives we have in place to foster creativity and drive groundbreaking solutions.',
-    authors: [{ name: 'Cindy Baker', avatar: '/static/images/avatar/3.jpg' }],
-  },
-  {
-    tag: 'Engineering',
-    title: 'Advancing cybersecurity with next-gen solutions',
-    description:
-      'Our next-generation cybersecurity solutions are setting new standards in the industry. Discover how we protect our clients from evolving cyber threats.',
+    tag: 'Philosophy',
+    title: 'El valor de la experiencia',
+    description: 'Todo conocimiento auténtico comienza en la experiencia.',
     authors: [
-      { name: 'Agnes Walker', avatar: '/static/images/avatar/4.jpg' },
-      { name: 'Trevor Henderson', avatar: '/static/images/avatar/5.jpg' },
+      { name: 'Immanuel Kant', avatar: '/static/images/avatar/2.jpg' },
     ],
   },
   {
-    tag: 'Product',
-    title: 'Enhancing customer experience through innovation',
-    description:
-      'Our innovative approaches are enhancing customer experience. Learn about the new features and improvements that are delighting our users.',
-    authors: [{ name: 'Travis Howard', avatar: '/static/images/avatar/2.jpg' }],
-  },
-  {
-    tag: 'Engineering',
-    title: 'Pioneering sustainable engineering solutions',
-    description:
-      "Learn about our commitment to sustainability and the innovative engineering solutions we're implementing to create a greener future. Discover the impact of our eco-friendly initiatives.",
+    tag: 'Philosophy',
+    title: 'Aprender con el corazón y la mente',
+    description: 'Educar la mente sin involucrar el corazón no tiene sentido.',
     authors: [
-      { name: 'Agnes Walker', avatar: '/static/images/avatar/4.jpg' },
-      { name: 'Trevor Henderson', avatar: '/static/images/avatar/5.jpg' },
+      { name: 'Aristóteles', avatar: '/static/images/avatar/3.jpg' },
     ],
   },
   {
-    tag: 'Product',
-    title: 'Maximizing efficiency with our latest product updates',
-    description:
-      'Our recent product updates are designed to help you maximize efficiency and achieve more. Get a detailed overview of the new features and improvements that can elevate your workflow.',
-    authors: [{ name: 'Travis Howard', avatar: '/static/images/avatar/2.jpg' }],
+    tag: 'Philosophy',
+    title: 'La humildad del saber',
+    description: 'La verdadera sabiduría está en reconocer nuestra ignorancia.',
+    authors: [
+      { name: 'Sócrates', avatar: '/static/images/avatar/4.jpg' },
+    ],
   },
   {
-    tag: 'Design',
-    title: 'Designing for the future: trends and insights',
-    description:
-      'Stay ahead of the curve with the latest design trends and insights. Our design team shares their expertise on creating intuitive and visually stunning user experiences.',
-    authors: [{ name: 'Kate Morrison', avatar: '/static/images/avatar/7.jpg' }],
+    tag: 'Philosophy',
+    title: 'El aprendizaje como fuente inagotable',
+    description: 'El aprendizaje no cansa a la mente, la enriquece.',
+    authors: [
+      { name: 'Leonardo da Vinci', avatar: '/static/images/avatar/5.jpg' },
+    ],
   },
   {
-    tag: 'Company',
-    title: "Our company's journey: milestones and achievements",
-    description:
-      "Take a look at our company's journey and the milestones we've achieved along the way. From humble beginnings to industry leader, discover our story of growth and success.",
-    authors: [{ name: 'Cindy Baker', avatar: '/static/images/avatar/3.jpg' }],
+    tag: 'Philosophy',
+    title: 'La vida es educación',
+    description: 'La educación no es preparación para la vida; es la vida misma.',
+    authors: [
+      { name: 'John Dewey', avatar: '/static/images/avatar/6.jpg' },
+    ],
+  },
+  {
+    tag: 'Philosophy',
+    title: 'El poder del conocimiento',
+    description: 'Saber te da la fuerza para cambiar tu realidad.',
+    authors: [
+      { name: 'Francis Bacon', avatar: '/static/images/avatar/7.jpg' },
+    ],
+  },
+  {
+    tag: 'Philosophy',
+    title: 'Encender la pasión por aprender',
+    description: 'La educación no llena un vacío, enciende una llama.',
+    authors: [
+      { name: 'William Butler Yeats', avatar: '/static/images/avatar/8.jpg' },
+    ],
+  },
+  {
+    tag: 'Philosophy',
+    title: 'Los frutos del aprendizaje',
+    description: 'Aunque el proceso de aprender puede ser arduo, su recompensa es dulce.',
+    authors: [
+      { name: 'Aristóteles', avatar: '/static/images/avatar/9.jpg' },
+    ],
+  },
+  {
+    tag: 'Philosophy',
+    title: 'El propósito del conocimiento',
+    description: 'La educación tiene el poder de iluminar el camino hacia la verdad.',
+    authors: [
+      { name: 'John F. Kennedy', avatar: '/static/images/avatar/10.jpg' },
+    ],
   },
 ];
 
@@ -163,7 +164,6 @@ function Author({ authors }: { authors: { name: string; avatar: string }[] }) {
           {authors.map((author) => author.name).join(', ')}
         </Typography>
       </Box>
-      <Typography variant="caption">July 14, 2021</Typography>
     </Box>
   );
 }
@@ -184,7 +184,7 @@ export default function Latest() {
   return (
     <div>
       <Typography variant="h2" gutterBottom>
-        Latest
+        Frases Célebres
       </Typography>
       <Grid container spacing={8} columns={12} sx={{ my: 4 }}>
         {articleInfo.map((article, index) => (
@@ -224,9 +224,9 @@ export default function Latest() {
           </Grid>
         ))}
       </Grid>
-      <Box sx={{ display: 'flex', flexDirection: 'row', pt: 4 }}>
+      {/* <Box sx={{ display: 'flex', flexDirection: 'row', pt: 4 }}>
         <Pagination hidePrevButton hideNextButton count={10} boundaryCount={10} />
-      </Box>
+      </Box> */}
     </div>
   );
 }

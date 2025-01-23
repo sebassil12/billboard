@@ -5,7 +5,7 @@ import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 
 const DragAndDropUploader = () => {
   const [image, setImage] = useState<string | null>(null);
-  const [text, setText] = useState("");
+  const [text, setText] = useState<string>("");
   const onDrop = (acceptedFiles: File[]) => {
     const file = acceptedFiles[0];
     if (file) {
@@ -28,10 +28,19 @@ const DragAndDropUploader = () => {
 
   useEffect(() => {
     const savedImage = localStorage.getItem("uploadedImage");
+    const savedText = localStorage.getItem("editableText");
+
     if (savedImage) {
       setImage(savedImage);
     }
+    if (savedText) {
+      setText(savedText);
+    }
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("editableText", text);
+  }, [text]);
 
   return (
     <Box
@@ -44,6 +53,34 @@ const DragAndDropUploader = () => {
     >
       <Typography variant="h1">Unidad Educativa Bilingüe</Typography>
       <Typography variant="h3">Cartelera Digital</Typography>
+      {image && (
+        <Box
+          marginTop={2}
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+        >
+          <Typography variant="subtitle1">Post Diario</Typography>
+          <img
+            src={image}
+            alt="Uploaded Preview"
+            style={{
+              maxWidth: "800px",
+              maxHeight: "800px",
+              borderRadius: "8px",
+              marginTop: "10px",
+            }}
+          />
+          <TextField
+            variant="outlined"
+            label="Texto Editable"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            fullWidth
+            sx={{ marginTop: 2, maxWidth: "300px" }}
+          />
+        </Box>
+      )}
       <Typography variant="h6">Subir la imagen</Typography>
       <Box
         {...getRootProps()}
@@ -85,34 +122,7 @@ const DragAndDropUploader = () => {
           }}
         />
       </Button>
-      {image && (
-        <Box
-          marginTop={2}
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-        >
-          <Typography variant="subtitle1">Imagen Cargada</Typography>
-          <img
-            src={image}
-            alt="Uploaded Preview"
-            style={{
-              maxWidth: "300px",
-              maxHeight: "300px",
-              borderRadius: "8px",
-              marginTop: "10px",
-            }}
-          />
-          <TextField
-            variant="outlined"
-            label="Texto Editable"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            fullWidth
-            sx={{ marginTop: 2, maxWidth: "300px" }}
-          />
-        </Box>
-      )}
+      
     </Box>
   );
 };
